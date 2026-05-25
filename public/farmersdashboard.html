@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Farmer Dashboard</title>
+</head>
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-green-600 text-white p-6 hidden md:block">
+    <h2 class="text-2xl font-bold mb-10">🌾 Agro-Bridge</h2>
+
+    <nav class="space-y-4">
+      <a href="#" class="block p-3 rounded-lg bg-white/20">📊 Dashboard</a>
+      <a href="#" class="block p-3 rounded-lg hover:bg-white/20">📦 My Products</a>
+      <a href="#" class="block p-3 rounded-lg hover:bg-white/20">➕ Add Product</a>
+      <a href="#" class="block p-3 rounded-lg hover:bg-white/20">📑 Orders</a>
+      <a href="#" class="block p-3 rounded-lg hover:bg-white/20">⚙ Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 p-6">
+
+    <!-- TOP BAR -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-2xl font-bold">Farmer Dashboard</h1>
+      <div class="flex items-center gap-4">
+        <span class="text-gray-600">Hello, Farmer 👋</span>
+        <div class="w-10 h-10 bg-green-500 rounded-full"></div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-gray-500">Total Products</h3>
+        <p class="text-3xl font-bold">12</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-gray-500">Orders</h3>
+        <p class="text-3xl font-bold">34</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-gray-500">Revenue</h3>
+        <p class="text-3xl font-bold">₦120,000</p>
+      </div>
+
+    </div>
+
+    <!-- ADD PRODUCT -->
+    <div class="bg-white p-6 rounded-xl shadow mb-8">
+      <h2 class="text-xl font-semibold mb-4">Add New Product</h2>
+
+      <form id="product-Form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input id="product-Name" type="text" placeholder="Product Name" class="border p-3 rounded-lg" />
+        <input id="product-Price" type="number" placeholder="Price" class="border p-3 rounded-lg" />
+        <input id="product-Image" type="file" class="border p-3 rounded-lg col-span-2" />
+        <textarea id="product-Description" placeholder="Description" class="border p-3 rounded-lg col-span-2"></textarea>
+
+        <button class="bg-green-600 text-white py-3 rounded-lg col-span-2">
+          Upload Product
+        </button>
+      </form>
+    </div>
+
+    <!-- PRODUCT LIST -->
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-xl font-semibold mb-4">My Products</h2>
+
+      <div id="product-List" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="border rounded-lg p-4">
+          <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" class="h-40 w-full object-cover rounded" />
+          <h3 class="font-semibold mt-2">Fresh Tomatoes</h3>
+          <p class="text-gray-500">₦2000</p>
+        </div>
+
+        <div class="border rounded-lg p-4">
+          <img src="https://images.unsplash.com/photo-1582515073490-dcbb6c63a9c3" class="h-40 w-full object-cover rounded" />
+          <h3 class="font-semibold mt-2">Organic Carrots</h3>
+          <p class="text-gray-500">₦1500</p>
+        </div>
+
+        <div class="border rounded-lg p-4">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" class="h-40 w-full object-cover rounded" />
+          <h3 class="font-semibold mt-2">Green Vegetables</h3>
+          <p class="text-gray-500">₦1800</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+<script src="./farmersdashboardscript.js"></script>
+
+</body>
+</html>

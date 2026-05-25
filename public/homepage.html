@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agro-Bridge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output-style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: "Inter", sans-serif;
+    }
+  </style>
+</head>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow-sm">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+<div class="flex items-center gap-3">
+<div class="bg-green-500 text-white w-10 h-10 rounded-lg flex items-center justify-center">🚜</div>
+<span class="font-bold text-xl">Agro-Bridge</span>
+</div>
+
+<div class="hidden md:flex items-center bg-gray-100 px-4 py-2 rounded-full w-[420px]">
+<span class="mr-2 text-gray-400">🔍</span>
+<input class="bg-transparent outline-none w-full text-sm"
+placeholder="Search for fresh grains, vegetables, or farm partners">
+</div>
+
+<nav class="hidden lg:flex gap-8 text-sm font-medium">
+<a class="text-green-600 border-b-2 border-green-600 pb-1">Home</a>
+<a class="hover:text-green-600">Categories</a>
+<a class="hover:text-green-600">Farm Partners</a>
+<a class="hover:text-green-600">About</a>
+</nav>
+
+<div class="flex items-center gap-4">
+<span class="text-xl">🛒</span>
+<button class="bg-green-500 text-white px-5 py-2 rounded-full font-medium hover:bg-green-600">
+Login
+</button>
+</div>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="relative h-[520px] flex items-center">
+
+<img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2"
+class="absolute inset-0 w-full h-full object-cover">
+
+<div class="absolute inset-0 bg-black/40"></div>
+
+<div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+
+<span class="bg-orange-500 px-4 py-1 rounded-full text-xs font-semibold tracking-wide">
+DIRECT FROM SOURCE
+</span>
+
+<h1 class="text-5xl font-extrabold leading-tight mt-5">
+Fresh From the <br> Farm <br> to Your Door
+</h1>
+
+<p class="mt-5 max-w-lg text-gray-200">
+Connecting you directly with local farmers for high-quality,
+sustainable produce. Support local agriculture with every bite.
+</p>
+
+<div class="mt-7 flex gap-4">
+<button class="bg-green-500 px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
+Start Shopping →
+</button>
+
+<button class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black">
+Meet Our Farmers
+</button>
+</div>
+
+</div>
+</section>
+
+<!-- CATEGORY -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+
+<div class="flex justify-between items-center mb-10">
+<div>
+<h2 class="text-2xl font-bold">Browse by Category</h2>
+<p class="text-gray-500 text-sm">Discover variety across our specialized farm segments</p>
+</div>
+
+<a class="text-green-600 text-sm font-semibold">View All →</a>
+</div>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="bg-white p-8 rounded-xl shadow-sm text-center">
+<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">🌾</div>
+<h3 class="font-semibold">Grains</h3>
+<p class="text-gray-400 text-sm">Corn, Rice, Wheat</p>
+</div>
+
+<div class="bg-white p-8 rounded-xl shadow-sm text-center">
+<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">🌿</div>
+<h3 class="font-semibold">Vegetables</h3>
+<p class="text-gray-400 text-sm">Root & Leafy Greens</p>
+</div>
+
+<div class="bg-white p-8 rounded-xl shadow-sm text-center">
+<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">🍊</div>
+<h3 class="font-semibold">Fruits</h3>
+<p class="text-gray-400 text-sm">Seasonal & Tropical</p>
+</div>
+
+<div class="bg-white p-8 rounded-xl shadow-sm text-center">
+<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">🐄</div>
+<h3 class="font-semibold">Livestock</h3>
+<p class="text-gray-400 text-sm">Poultry & Dairy</p>
+</div>
+
+</div>
+</section>
+
+<!-- LIVE FEED -->
+<section class="max-w-7xl mx-auto px-6 pb-16">
+
+<h2 class="text-xl font-bold mb-6">
+<span class="text-orange-500 mr-2">●</span>
+Live Produce Feed
+<span class="text-gray-400 text-sm ml-2">REAL-TIME STOCK</span>
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<!-- PRODUCT CARD -->
+<div class="bg-white rounded-xl shadow overflow-hidden">
+<img src="Imagecassava .jpeg"
+class="h-40 w-full object-cover">
+
+<div class="p-5">
+<p class="text-xs text-gray-400 mb-1">Farmer: John Doe</p>
+<h3 class="font-semibold">Premium Cassava</h3>
+<p class="text-green-600 font-bold text-lg">$2.50 <span class="text-sm text-gray-400">/kg</span></p>
+
+<button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+Buy Now
+</button>
+</div>
+</div>
+
+
+<!-- CARD -->
+<div class="bg-white rounded-xl shadow overflow-hidden">
+<img src="Imagespepper .jpeg"
+class="h-40 w-full object-cover">
+
+<div class="p-5">
+<p class="text-xs text-gray-400 mb-1">Green Valley Farms</p>
+<h3 class="font-semibold">Organic Peppers</h3>
+<p class="text-green-600 font-bold text-lg">$4.00 <span class="text-sm text-gray-400">/kg</span></p>
+
+<button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+Buy Now
+</button>
+</div>
+</div>
+
+
+<!-- CARD -->
+<div class="bg-white rounded-xl shadow overflow-hidden">
+<img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b"
+class="h-40 w-full object-cover">
+
+<div class="p-5">
+<p class="text-xs text-gray-400 mb-1">Farmer: Sarah Mills</p>
+<h3 class="font-semibold">Sun-Kissed Oranges</h3>
+<p class="text-green-600 font-bold text-lg">$3.20 <span class="text-sm text-gray-400">/kg</span></p>
+
+<button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+Buy Now
+</button>
+</div>
+</div>
+
+
+<!-- CARD -->
+<div class="bg-white rounded-xl shadow overflow-hidden">
+<img src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f"
+class="h-40 w-full object-cover">
+
+<div class="p-5">
+<p class="text-xs text-gray-400 mb-1">Riverside Poultry</p>
+<h3 class="font-semibold">Free-Range Eggs</h3>
+<p class="text-green-600 font-bold text-lg">$5.50 <span class="text-sm text-gray-400">/dz</span></p>
+
+<button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+Buy Now
+</button>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- FARMER CTA -->
+<section class="max-w-7xl mx-auto px-6 pb-20">
+
+<div class="bg-gradient-to-r from-green-900 to-green-700 rounded-2xl p-12 flex flex-col md:flex-row items-center gap-10 text-white">
+
+<div class="flex-1">
+<h2 class="text-3xl font-bold mb-4">Are You a Farmer?</h2>
+
+<p class="text-green-200 mb-6">
+Join 500+ local producers selling directly to thousands of customers.
+Get real-time analytics, fair pricing, and reliable logistics support.
+</p>
+
+<div class="flex gap-4">
+<button class="bg-green-500 px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
+Get Started Today
+</button>
+
+<button class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black">
+Learn More
+</button>
+</div>
+</div>
+
+<img src="image.jpeg"
+class="w-80 rounded-xl shadow-lg">
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-white border-t">
+<div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
+
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="bg-green-500 text-white w-10 h-10 rounded-lg flex items-center justify-center">🚜</div>
+<span class="font-bold text-lg">Agro-Bridge</span>
+</div>
+<p class="text-gray-500 text-sm">
+Empowering local agriculture through technology. Freshness,
+transparency, and fair trade at the core of everything we do.
+</p>
+</div>
+
+<div>
+<h4 class="font-semibold mb-3">Quick Links</h4>
+<ul class="space-y-2 text-gray-500 text-sm">
+<li>Our Story</li>
+<li>Browse Marketplace</li>
+<li>Sell on Agro-Bridge</li>
+<li>Logistics Partners</li>
+</ul>
+</div>
+
+<div>
+<h4 class="font-semibold mb-3">Categories</h4>
+<ul class="space-y-2 text-gray-500 text-sm">
+<li>Fresh Vegetables</li>
+<li>Grains & Tubers</li>
+<li>Livestock & Dairy</li>
+<li>Fruits & Berries</li>
+</ul>
+</div>
+
+<div>
+<h4 class="font-semibold mb-3">Newsletter</h4>
+<p class="text-gray-500 text-sm mb-4">
+Subscribe to get seasonal harvest updates and special discounts.
+</p>
+
+<div class="flex">
+<input class="flex-1 border rounded-l-lg px-3 py-2 text-sm"
+placeholder="Your email">
+<button class="bg-green-500 text-white px-4 rounded-r-lg">➤</button>
+</div>
+</div>
+
+</div>
+
+<div class="text-center text-gray-400 text-sm pb-6">
+© 2024 Agro-Bridge Marketplace. All rights reserved.
+</div>
+</footer>    
+
+
+</body>
+</html>
+https://images.unsplash.com/photo-1595152772835-219674b2a8a6

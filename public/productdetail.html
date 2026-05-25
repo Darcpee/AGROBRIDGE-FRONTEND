@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroBridge Productdetail</title>
+<link href="./output-style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+
+<body class="bg-[#f4f7f5] text-gray-800 font-sans">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-white shadow-sm">
+<div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+<!-- logo -->
+<div class="flex items-center gap-8">
+ <div class="flex items-center gap-2 font-bold text-green-600 text-lg">
+<div class="w-10 h-10 rounded-lg bg-green-500 flex items-center justify-center">
+   <i class="fas fa-seedling text-white text-sm"></i>
+
+</div>
+AgroBridge
+</div>
+
+<!-- links -->
+<nav class="hidden md:flex gap-6 text-sm font-medium">
+<a class="text-green-600 hover:text-green-700 transition">Marketplace</a>
+<a class="hover:text-green-600">Farms</a>
+<a class="hover:text-green-600">Orders</a>
+</nav>
+ </div>
+
+<!-- right -->
+<div class="flex items-center gap-6">
+    <!-- search input -->
+ <div class="hidden md:block">
+<input type="text" placeholder="Search produce..."
+class="bg-gray-100 rounded-full px-5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition w-64">
+</div>
+
+
+
+<!-- Cart Container -->
+ 
+<div class="relative ">
+
+  <!-- Cart Count Badge -->
+  <span id="cart-count" class="absolute -top-1 -right-2 bg-green-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+    0
+  </span>
+
+  <!-- Cart Button -->
+  <a href="carts.html" class="relative flex items-center justify-center w-10 h-10">
+
+    <!-- Cart Icon -->
+     <span class="text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 
+      80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+</span>
+</a>
+
+</div>
+
+<img src="imagefarmer.jpeg" class="w-9 h-9 rounded-full border-2 border-white shadow">
+
+</div>
+</div>
+</header>
+
+
+<!-- ================= PAGE ================= -->
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+<!-- breadcrumb -->
+<p class="text-sm text-gray-500 mb-6">
+Home › Root Vegetables › <span class="text-gray-700 font-medium">Fresh Cassava Roots</span>
+</p>
+
+
+<!-- ================= PRODUCT GRID ================= -->
+<div class="grid lg:grid-cols-2 gap-10">
+
+<!-- LEFT -->
+<div>
+  <img src="imagelargecassava.jpeg"  
+class="rounded-2xl shadow-md w-full">
+
+<!-- thumbnails -->
+<div class="flex gap-4 mt-4">
+<img src="imagelargecassava.jpeg"
+class="w-24 h-20 object-cover rounded-xl ring-2 ring-green-500">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef"
+class="w-24 h-20 object-cover rounded-xl">
+
+<img src="imagesoilcassava.jpeg"
+class="w-24 h-20 object-cover rounded-xl">
+
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924"
+class="w-24 h-20 object-cover rounded-xl">
+</div>
+
+</div>
+
+
+<!-- RIGHT -->
+<div>
+
+<!-- badges -->
+<div class="flex gap-3 mb-3">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Verified Farm</span>
+<span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">Limited Harvest</span>
+</div>
+
+<h1 class="text-3xl font-bold mb-2">Fresh Cassava Roots</h1>
+<p class="text-green-600 text-xl font-semibold mb-6">$2.50 / kg</p>
+
+
+<!-- add to cart box -->
+<div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+
+<div class="flex justify-between items-center mb-5">
+<p class="text-sm font-medium">Quantity (kg)</p>
+
+<div class="flex items-center gap-4 bg-gray-100 rounded-xl px-4 py-2">
+<button class="text-lg font-bold">−</button>
+<span>1</span>
+<button class="text-lg font-bold text-green-600">+</button>
+</div>
+</div>
+
+<button class="w-full bg-green-500 hover:bg-green-600 transition text-white py-3 rounded-xl font-semibold shadow">
+Add to Cart
+</button>
+
+<p class="text-xs text-center text-gray-500 mt-3">
+Order now and get fresh harvest within 48 hours.
+</p>
+
+</div>
+
+
+<!-- farm card -->
+<div class="bg-white rounded-2xl shadow-sm p-5 mb-6">
+
+<div class="flex items-center gap-4 mb-4">
+<img src="imagefarmer.jpeg" class="w-12 h-12 rounded-full">
+<div>
+<p class="font-semibold">Green Valley Estates</p>
+<p class="text-sm text-gray-500">Sustainable Farming • 12km away</p>
+</div>
+</div>
+
+<div class="grid grid-cols-2 gap-4 text-sm">
+
+<div class="bg-gray-100 rounded-xl p-3">
+<p class="text-gray-500">Harvested On</p>
+<p class="font-semibold">Oct 24, 2023</p>
+</div>
+
+<div class="bg-gray-100 rounded-xl p-3">
+<p class="text-gray-500">Storage Life</p>
+<p class="font-semibold">7–10 Days</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- timeline -->
+<div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+
+<div class="flex justify-between mb-5">
+<h3 class="font-semibold">Farm-to-Door Journey</h3>
+<span class="text-sm text-green-600 font-medium">Est. Arrival: Oct 26</span>
+</div>
+
+<div class="space-y-4 text-sm">
+
+<div>
+<p class="font-medium">Harvesting & Prep</p>
+<p class="text-gray-500">Quality checked and cleaned at source.</p>
+</div>
+
+<div>
+<p class="font-medium">Sorting & Packaging</p>
+<p class="text-gray-500">Eco-friendly crates for freshness.</p>
+</div>
+
+<div>
+<p class="font-medium">Direct Transit</p>
+<p class="text-gray-500">Temperature controlled delivery.</p>
+</div>
+
+</div>
+
+<div class="mt-6 bg-green-50 text-green-700 px-4 py-3 rounded-xl text-sm flex justify-between">
+Shipping to: Downtown Area
+<button class="underline">Change</button>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- ================= BOTTOM GRID ================= -->
+<div class="grid lg:grid-cols-2 gap-10 mt-14">
+
+<!-- description -->
+<div>
+<h2 class="text-xl font-bold mb-4">Product Description</h2>
+
+<p class="text-gray-600 leading-relaxed mb-6">
+Our Fresh Cassava Roots are sourced directly from fertile soil farms.
+Harvested manually for maximum freshness and long shelf life.
+Rich in carbohydrates and dietary fiber for diverse cooking needs.
+</p>
+
+<div class="grid sm:grid-cols-2 gap-4">
+
+<div class="bg-white rounded-xl shadow-sm p-4 text-sm">
+<p class="font-semibold">100% Organic</p>
+<p class="text-gray-500">No pesticides used</p>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm p-4 text-sm">
+<p class="font-semibold">Nutrition Grade A</p>
+<p class="text-gray-500">High starch & fiber</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- specs -->
+<div>
+<h2 class="text-xl font-bold mb-4">Technical Specs</h2>
+
+<div class="bg-white rounded-2xl shadow-sm p-6 space-y-4 text-sm">
+
+<div class="flex justify-between">
+<span class="text-gray-500">Variety</span>
+<span class="font-semibold">Sweet White Cassava</span>
+</div>
+
+<div class="flex justify-between">
+<span class="text-gray-500">Unit Size</span>
+<span class="font-semibold">20cm – 35cm</span>
+</div>
+
+<div class="flex justify-between">
+<span class="text-gray-500">Avg Weight</span>
+<span class="font-semibold">1.2kg</span>
+</div>
+
+<div class="flex justify-between">
+<span class="text-gray-500">Packaging</span>
+<span class="font-semibold">Breathable Jute</span>
+</div>
+
+</div>
+
+<!-- farmer note -->
+<div class="bg-green-500 text-white rounded-2xl p-6 mt-6 shadow">
+<p class="font-semibold mb-2">Farmer's Note</p>
+<p class="text-sm opacity-90">
+These roots reached peak maturity and are perfect for mashing or frying.
+</p>
+<p class="mt-3 text-sm font-semibold">— Samuel, Head Farmer</p>
+</div>
+
+</div>
+</div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="mt-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+© 2023 AgroBridge Logistics. Connecting farms to your doorstep.
+</div>
+</footer>
+
+<script src="./productdetailscript.js"></script>
+
+</body>
+</html>

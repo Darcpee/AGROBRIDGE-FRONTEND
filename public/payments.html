@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroBridge Checkout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <!-- <scr<ipt src="https://cdn.tailwindcss.com"></script> -->
+   <link rel="stylesheet" href="./output-style.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> -->
+
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="bg-green-500 p-2 rounded">
+        <i class="fas fa-tractor text-white"></i>
+      </div>
+      <span class="font-bold text-lg">AgroBridge</span>
+    </div>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-green-500">Marketplace</a>
+      <a href="#" class="hover:text-green-500">Orders</a>
+      <a href="#" class="hover:text-green-500">Support</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <i class="far fa-bell text-gray-500"></i>
+      <div class="w-8 h-8 rounded-full border border-gray-300 bg-gray-100"></div>
+    </div>
+  </header>
+
+  <!-- PROGRESS BAR -->
+  <div class="max-w-6xl mx-auto px-6 mt-6">
+    <div class="flex items-center justify-between">
+      <div class="flex-1 flex items-center">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center">1</div>
+        <span class="ml-2 text-green-500 font-semibold">Details</span>
+      </div>
+      <div class="flex-1 flex items-center">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center">2</div>
+        <span class="ml-2 text-green-500 font-semibold">Payment</span>
+      </div>
+      <div class="flex-1 flex items-center">
+        <div class="w-8 h-8 rounded-full bg-gray-300 text-white flex items-center justify-center">3</div>
+        <span class="ml-2 text-gray-400 font-semibold">Review</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto px-6 mt-6 grid md:grid-cols-3 gap-6">
+
+    <!-- LEFT: DELIVERY & PAYMENT -->
+    <div class="md:col-span-2 space-y-6">
+
+      <!-- DELIVERY DETAILS -->
+      <div class="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 class="font-bold text-lg flex items-center gap-2">
+          <i class="fas fa-truck text-green-500"></i> Delivery Details
+        </h2>
+        <div class="space-y-4">
+          <div>
+            <label class="text-sm font-semibold">Full Delivery Address</label>
+            <input id="shipping-address" type="text" class="w-full border border-gray-300 rounded p-2 mt-1" value="Block 4, Agrogov Estate, Le">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">City</label>
+              <input type="text" class="w-full border border-gray-300 rounded p-2 mt-1" value="Lagos">
+            </div>
+            <div>
+              <label class="text-sm font-semibold">State</label>
+              <select class="w-full border border-gray-300 rounded p-2 mt-1">
+                <option>Lagos State</option>
+                <option>oyo State</option>
+                <option>Abuja State</option>
+                <option>Ogun State</option>
+                <option>Anambra State</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-sm font-semibold">Preferred Delivery Slot</label>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <button class="bg-white border border-green-500 text-green-500 rounded p-2 font-semibold">TOMORROW 8AM - 11AM</button>
+              <button class="bg-gray-100 text-gray-400 rounded p-2 font-semibold">TOMORROW 12PM - 3PM</button>
+              <button class="bg-gray-100 text-gray-400 rounded p-2 font-semibold">WED, OCT 25 9AM - 12PM</button>
+              <button class="bg-gray-100 text-gray-400 rounded p-2 font-semibold">WED, OCT 25 2PM - 5PM</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYMENT METHOD -->
+      <div class="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 class="font-bold text-lg flex items-center gap-2">
+          <i class="fas fa-credit-card text-green-500"></i> Payment Method
+        </h2>
+        <div class="flex gap-4 mb-4">
+
+          <button data-method="card" 
+          class="payment-method flex-1 border border-green-500 text-gray-800 rounded p-3 flex items-center justify-center gap-2 bg-white font-semibold">
+            <i class="fas fa-credit-card"></i> Credit Card
+          </button>
+
+          <button data-method="bank" 
+          class="payment-method flex-1 border border-gray-300 text-gray-500 rounded p-3 flex items-center justify-center gap-2 font-semibold">
+            <i class="fas fa-university"></i> Bank Transfer
+          </button>
+
+          <button data-method="mobile"
+          class="payment-method flex-1 border border-gray-300 text-gray-500 rounded p-3 flex items-center justify-center gap-2 font-semibold">
+            <i class="fas fa-mobile-alt"></i> Mobile Money
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-semibold">Card Holder Name</label>
+            <input type="text" class="w-full border border-gray-300 rounded p-2 mt-1" value="Johnathan Doe">
+          </div>
+          <div>
+            <label class="text-sm font-semibold">Card Number</label>
+            <input type="text" class="w-full border border-gray-300 rounded p-2 mt-1" value="0000 0000 0000 0000">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-semibold">Expiry Date</label>
+            <input type="text" class="w-full border border-gray-300 rounded p-2 mt-1" placeholder="MM/YY">
+          </div>
+          <div>
+            <label class="text-sm font-semibold">CVV</label>
+            <input type="text" class="w-full border border-gray-300 rounded p-2 mt-1" placeholder="123">
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+          <i class="fas fa-lock"></i> Your transaction is secured with 256-bit AES encryption.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT: ORDER SUMMARY -->
+    <div class="space-y-4">
+      <div class="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 class="font-bold text-lg">Order Summary</h2>
+
+        <div id="checkout-items" class="space-y-4">
+          <div class="flex items-center gap-4">
+            <img src="Imagecassava.png" class="w-12 h-12 rounded object-cover" alt="">
+            <div class="flex-1">
+              <p class="font-semibold">Fresh Cassava</p>
+              <p class="text-sm text-gray-500">50kg Bag × 1</p>
+            </div>
+            <div class="text-right font-semibold">$0.00</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="imagebellpepper.jpeg" class="w-12 h-12 rounded object-cover" alt="">
+            <div class="flex-1">
+              <p class="font-semibold">Habanero Peppers</p>
+              <p class="text-sm text-gray-500">5kg Crate × 2</p>
+            </div>
+            <div class="text-right font-semibold">$0.00</div>
+          </div>
+          <button class="text-red-500 text-xs flex items-center gap-1"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        <div class="border-t border-gray-200 pt-4 space-y-2 text-sm">
+          <div class="flex justify-between">
+            <span id="subtotal">Subtotal</span>
+            <span>$0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Logistics Fee <i class="fas fa-info-circle text-gray-400"></i></span>
+            <span id="shipping">$0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Taxes (VAT)</span>
+            <span id="tax">$0.00</span>
+          </div>
+          <div class="flex justify-between font-bold text-green-500">
+            <span>Grandtotal</span>
+            <span id="grand-total">$0.00</span>
+          </div>
+        </div>
+        <button id="checkout-btn"
+        class="w-full bg-green-500 text-white font-semibold rounded p-3 mt-2 hover:bg-green-600 flex items-center justify-center gap-2">
+          Place Order & Pay <i class="fas fa-arrow-right"></i>
+        </button>
+        <div class="flex justify-center gap-2 mt-2 text-gray-400 text-sm">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+        </div>
+      </div>
+      <div class="bg-green-50 border border-green-100 rounded-lg p-4 flex items-center gap-2 text-green-700 text-sm">
+        <i class="fas fa-shield-alt"></i>
+        <span>Freshness Guaranteed — Produce is harvested 24h before delivery.</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 text-center text-gray-400 text-sm mb-6">
+    <i class="fas fa-tractor"></i> AgroBridge Checkout <br>
+    &copy; 2023 AgroBridge Solutions Inc. All rights reserved.
+  </footer>
+
+<script src="./paymentscript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroBridge Checkout</title>
+  <link href="./output-style.css" rel="stylesheet"> <!-- Tailwind CLI compiled CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <!-- NAVBAR -->
+  <!-- <header class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-green-500 rounded flex items-center justify-center text-white text-xl">
+          <i class="fas fa-tractor"></i>
+        </div>
+        <h1 class="font-bold text-lg">AgroBridge</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+        <a href="#" class="hover:text-green-500">Marketplace</a>
+        <a href="#" class="hover:text-green-500">Orders</a>
+        <a href="#" class="hover:text-green-500">Support</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button class="text-gray-500 hover:text-green-500"><i class="fas fa-bell"></i></button>
+        <div class="w-8 h-8 rounded-full overflow-hidden border border-gray-200">
+          <img src="imagefarmer.jpeg" alt="Profile" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </header> --> -->
+
+  <!-- MAIN CONTENT -->
+  <!-- <main class="max-w-7xl mx-auto px-6 py-10 grid lg:grid-cols-12 gap-8"> -->
+
+    <!-- STEP PROGRESS -->
+    <!-- <div class="lg:col-span-12 flex items-center justify-center mb-8 relative">
+      <div class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 -translate-y-1/2"></div>
+
+      <div class="flex items-center gap-12 relative z-10">
+        <div class="flex flex-col items-center cursor-pointer group">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-green-500 text-white group-hover:bg-green-600 transition">1</div>
+          <span class="text-sm font-semibold text-green-500 mt-1 group-hover:text-green-600">Details</span>
+        </div>
+        <div class="flex flex-col items-center cursor-pointer group">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-green-500 text-white group-hover:bg-green-600 transition">2</div>
+          <span class="text-sm font-semibold text-green-500 mt-1 group-hover:text-green-600">Payment</span>
+        </div>
+        <div class="flex flex-col items-center cursor-pointer group">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-gray-300 text-gray-500 group-hover:bg-green-500 group-hover:text-white transition">3</div>
+          <span class="text-sm mt-1 text-gray-500 group-hover:text-green-500">Review</span>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- LEFT SIDE: Delivery & Payment -->
+    <!-- <div class="lg:col-span-8 space-y-6"> -->
+
+      <!-- DELIVERY DETAILS -->
+      <!-- <section class="bg-white rounded-2xl shadow-lg p-8 space-y-6">
+        <div class="flex items-center gap-2 mb-4">
+          <i class="fas fa-truck text-green-500"></i>
+          <h2 class="text-lg font-bold">Delivery Details</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium mb-1 block">Full Delivery Address</label>
+            <input type="text" placeholder="Block 4, Agrogov Estate, Lekki" class="w-full border rounded-lg p-3">
+          </div>
+          <div>
+            <label class="text-sm font-medium mb-1 block">City</label>
+            <input type="text" placeholder="Lagos" class="w-full border rounded-lg p-3">
+          </div>
+          <div>
+            <label class="text-sm font-medium mb-1 block">State</label>
+            <select class="w-full border rounded-lg p-3">
+              <option>Lagos State</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="text-sm font-medium mb-2 block">Preferred Delivery Slot</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <button class="border rounded-lg p-3 text-xs sm:text-sm font-semibold text-green-500 border-green-500 bg-green-50 hover:bg-green-100 transition">TOMORROW<br>8AM - 11AM</button>
+            <button class="border rounded-lg p-3 text-xs sm:text-sm font-semibold text-gray-400 hover:text-green-500 hover:border-green-500 transition">TOMORROW<br>12PM - 3PM</button>
+            <button class="border rounded-lg p-3 text-xs sm:text-sm font-semibold text-gray-400 hover:text-green-500 hover:border-green-500 transition">WED, OCT 25<br>9AM - 12PM</button>
+            <button class="border rounded-lg p-3 text-xs sm:text-sm font-semibold text-gray-400 hover:text-green-500 hover:border-green-500 transition">WED, OCT 25<br>2PM - 5PM</button>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- PAYMENT METHOD -->
+      <!-- <section class="bg-white rounded-2xl shadow-lg p-8 space-y-6">
+        <div class="flex items-center gap-2 mb-4">
+          <i class="fas fa-wallet text-green-500"></i>
+          <h2 class="text-lg font-bold">Payment Method</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          <label class="cursor-pointer">
+            <input type="radio" name="payment" class="sr-only" checked>
+            <div class="border border-green-500 rounded-xl p-4 flex flex-col items-center justify-center text-gray-700 bg-green-50 hover:bg-green-100 transition">
+              <i class="fas fa-credit-card mb-2"></i>
+              <span class="text-sm font-semibold">Credit Card</span>
+            </div>
+          </label>
+
+          <label class="cursor-pointer">
+            <input type="radio" name="payment" class="sr-only">
+            <div class="border rounded-xl p-4 flex flex-col items-center justify-center text-gray-700 hover:border-green-500 hover:bg-green-50 transition">
+              <i class="fas fa-university mb-2"></i>
+              <span class="text-sm font-semibold">Bank Transfer</span>
+            </div>
+          </label>
+
+          <label class="cursor-pointer">
+            <input type="radio" name="payment" class="sr-only">
+            <div class="border rounded-xl p-4 flex flex-col items-center justify-center text-gray-700 hover:border-green-500 hover:bg-green-50 transition">
+              <i class="fas fa-mobile-alt mb-2"></i>
+              <span class="text-sm font-semibold">Mobile Money</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium mb-1 block">Card Holder Name</label>
+            <input type="text" placeholder="Johnathan Doe" class="w-full border rounded-lg p-3">
+          </div>
+          <div>
+            <label class="text-sm font-medium mb-1 block">Card Number</label>
+            <input type="text" placeholder="0000 0000 0000 0000" class="w-full border rounded-lg p-3">
+          </div>
+          <div>
+            <label class="text-sm font-medium mb-1 block">Expiry Date</label>
+            <input type="text" placeholder="MM/YY" class="w-full border rounded-lg p-3">
+          </div>
+          <div>
+            <label class="text-sm font-medium mb-1 block">CVV</label>
+            <input type="text" placeholder="123" class="w-full border rounded-lg p-3">
+          </div>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-2"><i class="fas fa-lock mr-1"></i> Your transaction is secured with 256-bit AES encryption.</p>
+      </section>
+
+    </div> -->
+
+    <!-- RIGHT SIDE: Order Summary -->
+    <!-- <aside class="lg:col-span-4 space-y-6 sticky top-20">
+      <div class="bg-white rounded-2xl shadow-lg p-6 space-y-4">
+        <h3 class="text-lg font-bold border-b pb-2">Order Summary</h3> -->
+        <!-- Item 1 -->
+        <!-- <div class="flex gap-4 items-center">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRZoKkvuouH8c4IcL5LK0ejv2dZE9qvqP3tuvCmnotzI_JK_hBWIq-2zcCG7J-NuHEZgTBdOvqxoWR36hqsXljnzL0OStpf7XqBKP3HVuFsST5Xm-UvXz_YM-37Bj1bHlCdcAAvSgZKFASeHapf_ou7kSt6NDcR42mvAnsSUtwTGtXO2gYR7dn89D7PihusqgDVQKSAXhHUwqrVDKJLlCO2clPq5RbPTa1e7_8GLhCKKHR0qI6kXsGkF5RLY4cFrC1wHs8_APyQm5d" class="w-16 h-16 object-cover rounded-lg" alt="Fresh Cassava">
+          <div class="flex-1">
+            <h4 class="font-semibold text-sm">Fresh Cassava</h4>
+            <p class="text-xs text-gray-500">50kg Bag × 1</p>
+          </div>
+          <span class="font-semibold text-sm">$45.00</span>
+        </div> -->
+        <!-- Item 2 -->
+        <!-- <div class="flex gap-4 items-center">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiLOSjCf0SFBPeSBkZfg5Uw9UaXfaN0OaFmlcyOxPHS7TIre5d-xSDB2sxY3QxXHdYzsI8-kuc1KPcg6_ROFYzNC9zT-IqY5WpXR43kWNeg2g-7ih3K-TggxAZ8NK4G68cEyLrkXWIBKcHbR_HeBYU7_vhuQJiY4pA0aRXLDEhX8MTvsoXBuv8ptjaOwZZRXNGk8cK9mnBB8QhecLRv98HSH48hue3PtgH6fkpFkA8ncXPvIjkk9m7gTtV-Kzfo_WvBP5NXIEON2zJ" class="w-16 h-16 object-cover rounded-lg" alt="Habanero Peppers">
+          <div class="flex-1">
+            <h4 class="font-semibold text-sm">Habanero Peppers</h4>
+            <p class="text-xs text-gray-500">5kg Crate × 2</p>
+          </div>
+          <span class="font-semibold text-sm">$12.50</span>
+        </div>
+
+        <div class="border-t pt-2 space-y-2 text-sm">
+          <div class="flex justify-between text-gray-600">
+            <span>Subtotal</span>
+            <span>$70.00</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>Logistics Fee <i class="fas fa-info-circle text-gray-400 text-xs ml-1"></i></span>
+            <span>$8.50</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>Taxes (VAT)</span>
+            <span>$2.40</span>
+          </div>
+          <div class="flex justify-between text-green-600 font-bold text-lg pt-2 border-t">
+            <span>Grand Total</span>
+            <span>$80.90</span>
+          </div>
+        </div>
+
+        <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg mt-4 flex items-center justify-center gap-2">
+          Place Order & Pay <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="bg-green-50 text-green-700 p-4 rounded-lg flex items-center gap-2 text-sm">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+          <p class="font-semibold">Freshness Guaranteed</p>
+          <p class="text-xs">Produce is harvested 24h before delivery.</p>
+        </div>
+      </div>
+    </aside>
+
+  </main> -->
+
+  <!-- FOOTER -->
+  <!-- <footer class="mt-20 border-t border-gray-200 py-6 text-center text-gray-500 text-xs">
+    <p>© 2023 AgroBridge Solutions Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html> --> -->

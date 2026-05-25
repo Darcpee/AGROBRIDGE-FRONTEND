@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro-Bridge-Login</title>
+    <link rel="stylesheet" href="./output-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+body{
+    font-family:'Inter', sans-serif;
+}
+/* LOADING OVERLAY */
+#loadingOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+display:none;
+}
+
+/* SPINNER */
+.spinner{
+border:6px solid #f3f3f3;
+border-top:6px solid #22c55e;
+border-radius:50%;
+width:60px;
+height:60px;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+0%{ transform:rotate(0deg); }
+100%{ transform:rotate(360deg); }
+}
+</style>
+</head>
+<body class="bg-gray-100">
+
+    
+     <!-- loading spinner -->
+  <div id="loadingOverlay">
+    <div class="flex flex-col items-center gap-4 text-white">
+
+<div class="spinner"></div>
+
+<p class="text-lg font-semibold">loging in...</p>
+
+</div>
+</div>
+
+    <div class="min-h-screen flex">
+
+<!-- LEFT SIDE -->
+<div class="hidden lg:flex w-1/2 relative">
+
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef"
+class="absolute inset-0 w-full h-full object-cover">
+
+<div class="absolute inset-0 bg-black/40"></div>
+
+<div class="relative z-10 flex flex-col justify-between p-12 text-white w-full">
+
+<div class="flex items-center gap-3">
+<div class="bg-green-500 w-10 h-10 rounded-lg flex items-center justify-center text-white text-xl">
+<svg xmlns="http://www.w3.org/2000/svg"  class="text-white" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-120v-319q-64 
+    0-123-24.5T213-533q-45-45-69-104t-24-123v-80h80q63 0 122 24.5T426-746q31 31 51.5 68t31.5 79q5-7 11-13.5t13-13.5q45-45 104-69.5T760-720h80v80q0 64-24.5 
+    123T746-413q-45 45-103.5 69T520-320v200h-80Zm0-400q0-48-18.5-91.5T369-689q-34-34-77.5-52.5T200-760q0 48 18 92t52 78q34 34 78 52t92 18Zm80 120q48 0 91.5-18t77.5-52q34-34 
+    52.5-78t18.5-92q-48 0-92 18.5T590-569q-34 34-52 77.5T520-400Zm0 0Zm-80-120Z"/></svg>
+</div>
+<span class="text-xl font-semibold tracking-wide">Agro-Bridge</span>
+</div>
+
+<div class="max-w-lg">
+<h1 class="text-4xl font-bold leading-tight mb-6">
+Connecting the roots of agriculture to the palm of your hand.
+</h1>
+
+<p class="text-lg text-gray-200">
+Direct access to fresh produce from local farms.<br>
+Empowering farmers, feeding communities.
+</p>
+</div>
+
+<div class="text-sm text-gray-300">
+© 2024 Agro-Bridge Inc. • Privacy Policy
+</div>
+
+</div>
+</div>
+
+
+<!-- RIGHT SIDE -->
+<div class="flex w-full lg:w-1/2 items-center justify-center">
+
+<div class="w-full max-w-md px-8">
+
+<h2 class="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
+<p class="text-gray-500 mb-8">
+Log in to manage your farm orders and deliveries.
+</p>
+
+<form id="loginForm" class="space-y-5">
+
+<!-- Email -->
+<div>
+<label class="text-sm text-gray-600">Email or Phone Number</label>
+<div class="mt-1 relative">
+<span class="absolute left-3 top-3 text-gray-400">👤</span>
+
+<input id="loginemail"
+ type="text"
+placeholder="e.g., farmer@agrobridge.com"
+class="w-full pl-10 pr-3 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+</div>
+</div>
+
+
+<!-- Password -->
+<div>
+<label class="text-sm text-gray-600">Password</label>
+
+<div class="mt-1 relative">
+
+<span class="absolute left-3 top-3 text-gray-400">🔒</span>
+
+<input id="loginpassword"
+type="password"
+placeholder="Enter password"
+class="w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+
+<span id="togglePass"
+class="absolute right-3 top-3 cursor-pointer text-gray-500 text-lg">
+ <i class="fa-regular fa-eye-slash"></i>
+</span>
+
+</div>
+</div>
+
+
+<!-- Remember -->
+<div class="flex items-center justify-between text-sm">
+
+<label class="flex items-center gap-2 text-gray-600">
+<input type="checkbox" class="accent-green-600">
+Remember me
+</label>
+
+<a href="#" class="text-green-600 font-medium hover:underline">
+Forgot Password?
+</a>
+
+</div>
+
+
+<!-- Button -->
+<button
+type="submit"
+class="w-full bg-green-500 hover:bg-green-600 transition text-white py-3 rounded-lg font-semibold shadow-lg">
+Sign In
+</button>
+
+</form>
+
+
+<!-- Divider -->
+<div class="flex items-center my-8">
+<div class="flex-1 h-px bg-gray-300"></div>
+<span class="px-4 text-gray-400 text-sm">Or continue with</span>
+<div class="flex-1 h-px bg-gray-300"></div>
+</div>
+
+
+<!-- Social -->
+<div class="grid grid-cols-2 gap-4">
+
+<button class="border rounded-lg py-3 flex items-center justify-center gap-2 hover:bg-gray-50">
+<img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5">
+Google
+</button>
+
+<button class="border rounded-lg py-3 flex items-center justify-center gap-2 hover:bg-gray-50">
+<img src="https://www.svgrepo.com/show/475647/facebook-color.svg" class="w-5">
+Facebook
+</button>
+
+</div>
+
+
+<p class="text-center text-gray-500 mt-8 text-sm">
+Don't have an account?
+<a href="signup.html" class="text-green-600 font-semibold hover:underline">Sign Up</a>
+</p>
+
+</div>
+</div>
+
+</div>
+<script src="./loginscript.js"></script>
+    
+</body>
+</html>

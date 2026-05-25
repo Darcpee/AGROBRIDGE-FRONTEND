@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agro-Bridge | Direct from Farm to Table</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbd49",
+                        "primary-dark": "#0a8c36",
+                        "accent-gold": "#f59e0b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(16, 34, 22, 0.8), rgba(16, 34, 22, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<nav class="container mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons text-white">eco</span>
+</div>
+<span class="text-2xl font-bold tracking-tight text-background-dark dark:text-white">Agro<span class="text-primary">Bridge</span></span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#how-it-works">How it Works</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#farmers">Local Farmers</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-sm font-semibold hover:text-primary" href="#">Log In</a>
+<a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-lg font-semibold transition-all shadow-lg shadow-primary/20" href="#">Register</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Fresh organic vegetables" class="w-full h-full object-cover" data-alt="Close up of fresh organic vegetables at a market" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcT5RsU3v0XMX-KHH4_10rJNW7KAEBF8Ed8y4gvbx0tH-0Tm6uqhwtwCrrrhpyiF5LdfVUbmoESps6uujMhnCpmOUuTVTKyQ_MX2xiUiCbClgmj8Je2sZ1ydxHPPwXBzmezF_EQWvzatJKXCacDKLONuliTIKTuTjKaJQn6fPq0qmQ1brd1U5oDx1qdOTDJbZaJgba0_IrB-RKU4xqAWo_UUv-I0mW99gvw8OUrvhn4BQnfXjBcsnSXSEhThBhsrFBuI4p1-lOpQSa"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary font-bold text-xs uppercase tracking-widest mb-4">Sustainable &amp; Direct</span>
+<h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                        Direct from <br/> <span class="text-primary">Farm to Table</span>
+</h1>
+<p class="text-lg text-slate-200 mb-10 leading-relaxed max-w-xl">
+                        Support local growers and get the freshest organic produce delivered straight from the soil to your doorstep. No middlemen, just quality.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2 group">
+                            Start Shopping
+                            <span class="material-icons group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
+                            Join as a Farmer
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-24 bg-white dark:bg-background-dark" id="how-it-works">
+<div class="container mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-3xl font-bold mb-4">Simple, Transparent, Local</h2>
+<p class="text-slate-500 dark:text-slate-400">We've built a platform that simplifies the journey of your food, ensuring freshness and fair pay for farmers.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-background-light dark:bg-primary/5 border border-primary/5">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-icons text-primary text-3xl">inventory_2</span>
+</div>
+<h3 class="text-xl font-bold mb-3">1. Source</h3>
+<p class="text-slate-600 dark:text-slate-400">Farmers list their daily harvest directly on the platform as soon as they pick it.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-background-light dark:bg-primary/5 border border-primary/5">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-icons text-primary text-3xl">hub</span>
+</div>
+<h3 class="text-xl font-bold mb-3">2. Connect</h3>
+<p class="text-slate-600 dark:text-slate-400">Browse produce from farms near you and buy directly at fair market prices.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center p-8 rounded-2xl bg-background-light dark:bg-primary/5 border border-primary/5">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-icons text-primary text-3xl">local_shipping</span>
+</div>
+<h3 class="text-xl font-bold mb-3">3. Deliver</h3>
+<p class="text-slate-600 dark:text-slate-400">Our eco-friendly delivery team brings the harvest from farm to your door within 24 hours.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-24 bg-background-light dark:bg-slate-900/50">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<div class="grid grid-cols-2 gap-6">
+<div class="p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-primary/5">
+<span class="material-icons text-accent-gold mb-4">verified_user</span>
+<h4 class="font-bold mb-2">100% Organic</h4>
+<p class="text-sm text-slate-500">Certified farmers committed to chemical-free growth.</p>
+</div>
+<div class="p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-primary/5 mt-8">
+<span class="material-icons text-primary mb-4">payments</span>
+<h4 class="font-bold mb-2">Fair Trade</h4>
+<p class="text-sm text-slate-500">Farmers keep 90% of the sale price, unlike traditional retail.</p>
+</div>
+<div class="p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-primary/5">
+<span class="material-icons text-primary mb-4">nature_people</span>
+<h4 class="font-bold mb-2">Sustainability</h4>
+<p class="text-sm text-slate-500">Reduced carbon footprint through localized supply chains.</p>
+</div>
+<div class="p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-primary/5 mt-8">
+<span class="material-icons text-accent-gold mb-4">star</span>
+<h4 class="font-bold mb-2">Top Quality</h4>
+<p class="text-sm text-slate-500">Produce is picked at peak ripeness for maximum flavor.</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<h2 class="text-4xl font-bold mb-6">Empowering Local Communities Through Fair Trade</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                            Agro-Bridge isn't just a marketplace; it's a movement to restore the connection between the person who grows the food and the person who eats it. We eliminate unnecessary logistics and waste.
+                        </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-icons text-primary text-sm">check_circle</span>
+<span class="font-medium">No hidden handling fees</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-primary text-sm">check_circle</span>
+<span class="font-medium">Full traceability for every product</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-primary text-sm">check_circle</span>
+<span class="font-medium">Direct support for rural economies</span>
+</li>
+</ul>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-bold transition-all">
+                            Learn More About Our Mission
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Rated Farmers -->
+<section class="py-24 bg-white dark:bg-background-dark" id="farmers">
+<div class="container mx-auto px-6">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<h2 class="text-3xl font-bold mb-4">Meet the Hands that Feed You</h2>
+<p class="text-slate-500 dark:text-slate-400">Discover top-rated local farmers in your area known for their quality and dedication.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
+                        View All Farmers
+                        <span class="material-icons text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-4 gap-8">
+<!-- Farmer 1 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-2xl mb-4">
+<img alt="Farmer John" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of a smiling local farmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARF-8JX6hb6OxYj7BIbjHZ1yQMboGejgOhMELY0qYRs-4zz4rpYxyrvwiCp0JdkiZQUnA0KNZswA8gAqPtoJ0zDcD5plCkXntNFZkBnRv1WIHy3yvu9IGfFkWTa15AwaprWExTuwdFCJJMuMAtK-NCN_y0-_Ad3qzRTzStLJh6WCjcTS-lR9b0nD5m3QTakhofv5olj-7zoY61Givm97-fSMposqc2VYEd_0I9-Gxj9S-2uzaWOVQ-Pk1flMXtrGunhNQ4f9Tqb40a"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-background-dark flex items-center gap-1">
+<span class="material-icons text-accent-gold text-[12px]">star</span>
+                                4.9
+                            </div>
+</div>
+<h3 class="font-bold text-lg">Farmer John</h3>
+<p class="text-slate-500 text-sm mb-2">Green Valley Farms</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Berries</span>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Leafy Greens</span>
+</div>
+</div>
+<!-- Farmer 2 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-2xl mb-4">
+<img alt="Farmer Sarah" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Farmer woman working in a greenhouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWNi_mNcwkdfvcWNZb4NI06sdZ_sRpiY8a6IC9nQvwwrmDbult8MOFwIZZC310-dx9No_QbFJC3MazLoR4DrecAuTKX-SeBb_7BIcIh3GBpJrKJb6GBNqVAkaI7DOFd96rtdpJ6GDdtuL9fHIwPUSnC6a0MrlZM4r0VyjCcIXTy3cRugMro5Sr0sve8EpdRM7oa7CC1bJgTieknQ4DI6nsye7oHSFXAk2BGiVgqYvUmCJX2SeQF8dovyDWgH42PNybrsg5hOeOeXZN"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-background-dark flex items-center gap-1">
+<span class="material-icons text-accent-gold text-[12px]">star</span>
+                                5.0
+                            </div>
+</div>
+<h3 class="font-bold text-lg">Sarah Jenkins</h3>
+<p class="text-slate-500 text-sm mb-2">Sunny Crest Orchards</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Apples</span>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Honey</span>
+</div>
+</div>
+<!-- Farmer 3 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-2xl mb-4">
+<img alt="Farmer Mike" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Young farmer in a field of wheat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD71FNan_qYq8rDyRxIFGSLW0E3-SAWHi7qpZbCMyLqZmwkvDKZQZqFTjAJP2ZmbWeVSF_cOWx4DqxR2ZMm42P8H5z4uOuD8uMdFiFrp8R_aInxfSLxBz2EJfy5_ne6QXPmR_jzl1QXPEwZYNpOfdoetvQITG7oYjG23x85dqcTtpiGj0w3ZNf53MDz5dkvGJhX2AoXR8DLHIRUYcZuUs3G7OcI-hsyjQsFYU78cEreRkFSWRGMt9CNNumW8uyrOig-t7jt_yozt3Al"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-background-dark flex items-center gap-1">
+<span class="material-icons text-accent-gold text-[12px]">star</span>
+                                4.8
+                            </div>
+</div>
+<h3 class="font-bold text-lg">Mike Thompson</h3>
+<p class="text-slate-500 text-sm mb-2">EarthFirst Organics</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Root Veg</span>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Grains</span>
+</div>
+</div>
+<!-- Farmer 4 -->
+<div class="group">
+<div class="relative overflow-hidden rounded-2xl mb-4">
+<img alt="Farmer Elena" class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Farmer showing a handful of fresh carrots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP1CEQ2goIv65uAdvF-Us786D5ESMdx-Sz9C3826vICWfwXTRnstoEnZ_q4jr2xpO97c8Z4PWik46S1_aQ6mlTu5fV65KuciWKjTPw3eq23JuvxFFSwmOZr_MpTy6MQ9JR9ePsSRKeudqdePoHNJcey4r7GnrzmA_NE6SqHOF16WmPLy7yepDU_UxUF1RO8yZetiU25F0nZmnKglHUIv82-r7araU3ul6eOzGq6cGs1JsWbQNyH1rpnOzmzwtQ80YtHWgx8DYJLVh-"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-background-dark flex items-center gap-1">
+<span class="material-icons text-accent-gold text-[12px]">star</span>
+                                4.9
+                            </div>
+</div>
+<h3 class="font-bold text-lg">Elena Rossi</h3>
+<p class="text-slate-500 text-sm mb-2">The Heirloom Co-op</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Tomatoes</span>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold uppercase tracking-wider">Herbs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Taste the Difference?</h2>
+<p class="text-white/80 mb-10 max-w-xl mx-auto text-lg">Join thousands of families supporting local agriculture and enjoying better food.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-primary hover:bg-slate-100 px-10 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">
+                        Start Shopping Now
+                    </button>
+<button class="bg-primary-dark text-white border border-primary-dark/50 hover:bg-background-dark/20 px-10 py-4 rounded-xl font-bold text-lg transition-all">
+                        Find Local Hubs
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark text-white py-20">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons text-white">eco</span>
+</div>
+<span class="text-2xl font-bold tracking-tight">Agro<span class="text-primary">Bridge</span></span>
+</div>
+<p class="text-slate-400 max-w-sm mb-8">Connecting communities with their local food sources through a transparent, fair-trade marketplace that benefits everyone.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="Facebook" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWs98QfkKPLbTYfUsn1-uCVf6MXtL-DBdOSA28nHIYh9xr3t51V1CKumdhDuCRfZFILWSKOQ1TzXeoo1qREWFJeGtt6Vb6w581rleok7gqodT3lsIOap5Pyd-SYC1Boos8_qsduYzgU-X_UL0R9f0ozsjMLZzRrTGJT6KJq-lFw4G4OxbnMXl5BVZ20oRINVu5qCnsqlmw_EnoNUWJO5cgtkJryjQfnJFH65qISBh0N37_pE3AifvIkDIo4oaJQgdAIQP4HWXFsPYN"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="Instagram" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5krUb7Xc6LIDfGgR9fcgWW3ZCV8bjGGZ21AlgOimMpUY53SJsO7eBCV3BsiionfNQKD6wtsUzDVIw07LNHidyKOPgAa0LqffAyYgLJ_1DupkFJYal-AxlNOwMRpxFcznLtYaog9xx_fIzdwlUbYSjAxIK9I5qs2wXRa2hpzMgsDXZ2ASiwT9mLk33HBlsoOhAw31BRCX-6mCgDUL-Iksx0a6GT6AcsDTfFYGvwHS60jKkWdy3hQAu8yFPDQQN7IXRuwiiyLqtV6lR"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<img alt="Twitter" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlMTD0BkofiubB5zD2XRCZ0SCrX_LSmLQSev2AZTvKee4gVERrjaZuMwqWiKAF5XbHQasBQzFsn5EFohe--NMTk6hl7_14uNVFqUxkXjo4jbk3xDy6Me4uD5HFXD1NILy52DK2TtuavbTBaoqwxUu1MX35nglfOp5n98MlH3Zkm_RuzmhpIN-rkciiMRpJSmVVV1muUERCyTblRrLjVjy6LGbTyWaNPTglgRfvKDrvKUK37hZXKAq82dTVX0DjXMAytD9mKxIjLZtE"/>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-lg">Platform</h4>
+<ul class="space-y-4 text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">How it Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Browse Marketplace</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Farmer Registration</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Delivery Map</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-lg">Company</h4>
+<ul class="space-y-4 text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Impact Report</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:row justify-between items-center gap-4 text-sm text-slate-500">
+<p>© 2024 Agro-Bridge Marketplace. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

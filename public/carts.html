@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroBridge Cart</title>
+
+<link rel="stylesheet" href="./output-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-[#f5f7f6] text-gray-800 overflow-x-hidden">
+
+<!-- HEADER -->
+<header class="flex justify-between items-center w-full px-8 py-4 sticky top-0 z-50 bg-[#f9faef] dark:bg-stone-900">
+
+  <div class="flex items-center gap-8">
+
+    <span class="text-2xl font-black tracking-tight text-[#436619] dark:text-[#c5f093]">AgroBridge</span>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a class="text-green-600 border-b-2 border-green-500 pb-1">Marketplace</a>
+      <a class="hover:text-green-600">Analytics</a>
+      <a class="hover:text-green-600">Inventory</a>
+    </nav>
+
+  </div>
+
+  <div class="flex items-center gap-4">
+
+<!-- notifications -->
+<div class="relative">
+<span class="text-xl">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+<path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v28Z"/>
+</svg>
+</span>
+
+<span id="update-notification"
+class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+0
+</span>
+</div>
+
+
+<!-- cart -->
+<div class="relative">
+<span class="text-xl">
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" width="24px" fill="#1f1f1f">
+<path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/>
+</svg>
+</span>
+
+<span id="cart-count"
+class="absolute -top-2 -right-2 bg-green-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+0
+</span>
+</div>
+
+<img class="w-10 h-10 rounded-full border-2 border-[#b7d98d]"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHEnxn-XhynEaV9hqReHYJ_yMGHw5BWLSgSTN3VRqdBonaurufQxOijWirWB9NZ3KEWNBWJvH8rcMDSMCdc-arZPUpOV8Ac-sMEPsAzgM4U3LOTK7vYKTrgsEUgkMRk4WimPhxwC1w8tvdNyX3fn5SfAird8LumBBpRK4usLRTfya5Ew6utF6JTRkVyET_8LdPD9Xj6o_wyk-5pvPOMcFt22Qw-9utGwok40PBsoOEV3ZjpW4V2zAnH18-zXDJcet43R4YF1y72BKU">
+
+</div>
+
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-8 py-12">
+
+  <!-- TITLE -->
+  <div class="mb-12">
+    <h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-2">Your Shopping Cart</h1>
+    <p class="text-on-surface-variant font-medium">Review your selections from artisanal producers across the bridge.</p>
+  </div>
+<!--  -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+    <!-- LEFT CART -->
+    <div class="lg:col-span-8 space-y-6">
+
+      <div id="cart-items"></div>
+
+
+      <!-- CONTINUE -->
+      <button class="flex items-center gap-2 text-[#436619] font-bold mt-6 ">
+       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M400-240 
+        160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg>
+        Continue Shopping
+      </button>
+
+    </div>
+    
+
+    
+    <!-- RIGHT SUMMARY -->
+<!-- RIGHT SUMMARY -->
+<div class="lg:col-span-4 sticky top-28">
+
+  <div class="bg-gray-100 border border-gray-200 rounded-xl p-8 space-y-8">
+
+    <h2 class="text-2xl font-extrabold text-gray-900">Order Summary</h2>
+
+    <div class="space-y-4">
+
+      <div class="flex justify-between text-gray-600">
+        <span>Subtotal</span>
+        <span id="subtotal" class="font-bold">$0.00</span>
+      </div>
+
+      <div class="flex justify-between items-center text-gray-600">
+        <span class="flex items-center gap-2">
+          Estimated Shipping
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 -960 960 960" fill="currentColor">
+            <path d="M440-280h80v-240h-80v240Z"/>
+          </svg>
+        </span>
+
+        <span id="Estimated-shipping" class="font-bold">$0.00</span>
+      </div>
+
+      <div class="flex justify-between text-gray-600">
+        <span>Tax (calculated at checkout)</span>
+        <span id="tax" class="font-bold">$0.00</span>
+      </div>
+
+      <!-- soft divider -->
+      <div class="border-t border-gray-300 pt-4"></div>
+
+      <div class="flex justify-between text-lg font-bold">
+        <span>Grand Total</span>
+        <span id="grand-total" class="text-green-700">$0.00</span>
+      </div>
+
+    </div>
+
+    <!-- Checkout Button -->
+    <button id="checkout-btn"
+     class="w-full py-4 bg-green-600 text-white font-bold rounded-lg shadow-md hover:bg-green-700 transition-all flex items-center justify-center gap-2">
+      Proceed to Checkout
+      <i class="fa-solid fa-lock"></i>
+    </button>
+
+    <!-- Secure Section -->
+    <div class="flex flex-col gap-4 pt-2">
+
+      <p class="text-xs text-gray-600 flex items-center gap-2">
+       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-700" viewBox="0 -960 960 960" fill="currentColor">
+          <path d="m438-339 220-221-51-51-169 
+          170-85-85-51 51 136 136Zm42 
+          243q-135-33-223.5-152.84Q168-368.69 
+          168-515v-229l312-120 312 
+          120v229q0 146.31-88.5 
+          266.16Q615-129 480-96Z"/>
+        </svg>
+
+        Secure Transaction via AgroPay
+      </p>
+
+      <!-- Logistics Partner Micro-card -->
+      <div class="bg-white p-4 rounded-lg flex items-center gap-4 border border-gray-200">
+
+        <div class="p-2 bg-green-100 rounded-lg">
+          <span class="material-symbols-outlined text-green-700">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f"><path d="M155-227q-35-35-35-85H48v-408q0-29.7 21.15-50.85Q90.3-792 120-792h552v144h120l120 168v168h-72q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35q-50 0-85-35Zm119-51q14-14 14-34t-14-34q-14-14-34-14t-34 14q-14 14-14 34t14 34q14 14 34 14t34-14ZM120-384h24q17-23 42-35.5t54-12.5q29 0 54 12.5t41.53 35.5H600v-336H120v336Zm634 106q14-14 
+                14-34t-14-34q-14-14-34-14t-34 14q-14 14-14 34t14 34q14 14 34 14t34-14Zm-82-178 168-1-85-119h-83v120Zm-310-93Z"/></svg>
+          </span>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold text-gray-900">
+            AgroLogistics Premium
+          </p>
+
+          <p class="text-[11px] text-gray-500">
+            Delivery: 2-3 Business Days
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+</main>
+<!-- Contextual FAB Suppression: FAB not shown on Cart as per "focused journey" mandate -->
+<footer class="mt-20 bg-green-100 border border-green-300 px-6 md:px-8 py-12 rounded-none">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+
+    <!-- Brand -->
+    <div class="flex flex-col gap-2">
+      <span class="text-xl font-black text-primary">AgroBridge</span>
+      <p class="text-sm text-gray-700 max-w-xs">
+        Connecting the world's most innovative agronomists with premium sustainable harvests.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <nav aria-label="Footer navigation"
+      class="flex flex-col md:flex-row gap-4 md:gap-8 text-sm font-medium">
+
+      <a href="/privacy"
+        class="text-green-800 hover:text-green-900 transition-colors">
+        Privacy Policy
+      </a>
+
+      <a href="/terms"
+        class="text-green-800 hover:text-green-900 transition-colors">
+        Terms of Service
+      </a>
+
+      <a href="/help"
+        class="text-green-800 hover:text-green-900 transition-colors">
+        Help Center
+      </a>
+
+    </nav>
+
+    <!-- Icon -->
+    <div class="flex items-center gap-4">
+      <button
+        type="button"
+        aria-label="Share AgroBridge"
+        class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-green-200 transition-colors focus:outline-none focus:ring-2 focus:ring-green-600">
+
+        <i class="fa-solid fa-share-nodes text-green-800 text-lg"></i>
+
+      </button>
+    </div>
+
+  </div>
+</footer>
+<script src="./carts.js"></script>
+
+</body>
+</html>

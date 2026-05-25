@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroBridge Checkout</title>
+
+  <!-- Tailwind CLI compiled CSS -->
+  <link href="./output-style.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="bg-green-500 p-2 rounded">
+        <i class="fa-solid fa-tractor text-white"></i>
+      </div>
+      <span class="font-bold text-lg">AgroBridge</span>
+    </div>
+
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-green-500">Marketplace</a>
+      <a href="#" class="hover:text-green-500">Orders</a>
+      <a href="#" class="hover:text-green-500">Support</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <i class="fa-regular fa-bell text-gray-500"></i>
+      <div class="w-8 h-8 rounded-full border border-gray-300 bg-gray-100"></div>
+    </div>
+  </header>
+
+
+  <!-- PROGRESS BAR -->
+  <div class="max-w-6xl mx-auto px-6 mt-6">
+    <div class="flex items-center justify-between">
+
+      <div class="flex-1 flex items-center">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center">1</div>
+        <span class="ml-2 text-green-500 font-semibold">Details</span>
+      </div>
+
+      <div class="flex-1 flex items-center">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center">2</div>
+        <span class="ml-2 text-green-500 font-semibold">Payment</span>
+      </div>
+
+      <div class="flex-1 flex items-center">
+        <div class="w-8 h-8 rounded-full bg-gray-300 text-white flex items-center justify-center">3</div>
+        <span class="ml-2 text-gray-400 font-semibold">Review</span>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto px-6 mt-6 flex gap-6">
+
+
+    <!-- LEFT SIDE -->
+    <div class="flex-1 space-y-6">
+
+
+      <!-- DELIVERY DETAILS -->
+      <div class="bg-white rounded-lg shadow p-6 space-y-4">
+
+        <h2 class="font-bold text-lg flex items-center gap-2">
+          <i class="fa-solid fa-truck text-green-500"></i>
+          Delivery Details
+        </h2>
+
+        <div class="space-y-4">
+
+          <div>
+            <label class="text-sm font-semibold">Full Delivery Address</label>
+            <input type="text"
+            class="w-full border border-gray-300 rounded p-2 mt-1"
+            value="Block 4, Agrogov Estate, Le">
+          </div>
+
+
+          <div class="grid grid-cols-2 gap-4">
+
+            <div>
+              <label class="text-sm font-semibold">City</label>
+              <input type="text"
+              class="w-full border border-gray-300 rounded p-2 mt-1"
+              value="Lagos">
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">State</label>
+              <select class="w-full border border-gray-300 rounded p-2 mt-1">
+                <option>Lagos State</option>
+              </select>
+            </div>
+
+          </div>
+
+
+          <div>
+            <label class="text-sm font-semibold">Preferred Delivery Slot</label>
+
+            <div class="flex gap-2 mt-2 flex-wrap">
+
+              <button class="bg-white border border-green-500 text-green-500 rounded p-2 font-semibold">
+                TOMORROW 8AM - 11AM
+              </button>
+
+              <button class="bg-gray-100 text-gray-400 rounded p-2 font-semibold">
+                TOMORROW 12PM - 3PM
+              </button>
+
+              <button class="bg-gray-100 text-gray-400 rounded p-2 font-semibold">
+                WED, OCT 25 9AM - 12PM
+              </button>
+
+              <button class="bg-gray-100 text-gray-400 rounded p-2 font-semibold">
+                WED, OCT 25 2PM - 5PM
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <!-- PAYMENT METHOD -->
+      <div class="bg-white rounded-lg shadow p-6 space-y-4">
+
+        <h2 class="font-bold text-lg flex items-center gap-2">
+          <i class="fa-solid fa-credit-card text-green-500"></i>
+          Payment Method
+        </h2>
+
+
+        <div class="flex gap-4 mb-4">
+
+          <button class="flex-1 border border-green-500 rounded p-3 flex items-center justify-center gap-2 font-semibold">
+            <i class="fa-solid fa-credit-card"></i>
+            Credit Card
+          </button>
+
+          <button class="flex-1 border border-gray-300 text-gray-500 rounded p-3 flex items-center justify-center gap-2 font-semibold">
+            <i class="fa-solid fa-building-columns"></i>
+            Bank Transfer
+          </button>
+
+          <button class="flex-1 border border-gray-300 text-gray-500 rounded p-3 flex items-center justify-center gap-2 font-semibold">
+            <i class="fa-solid fa-mobile-screen"></i>
+            Mobile Money
+          </button>
+
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <div>
+            <label class="text-sm font-semibold">Card Holder Name</label>
+            <input type="text"
+            class="w-full border border-gray-300 rounded p-2 mt-1"
+            value="Johnathan Doe">
+          </div>
+
+          <div>
+            <label class="text-sm font-semibold">Card Number</label>
+            <input type="text"
+            class="w-full border border-gray-300 rounded p-2 mt-1"
+            value="0000 0000 0000 0000">
+          </div>
+
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <div>
+            <label class="text-sm font-semibold">Expiry Date</label>
+            <input type="text"
+            class="w-full border border-gray-300 rounded p-2 mt-1"
+            placeholder="MM/YY">
+          </div>
+
+          <div>
+            <label class="text-sm font-semibold">CVV</label>
+            <input type="text"
+            class="w-full border border-gray-300 rounded p-2 mt-1"
+            placeholder="123">
+          </div>
+
+        </div>
+
+
+        <p class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+          <i class="fa-solid fa-lock"></i>
+          Your transaction is secured with 256-bit AES encryption.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ORDER SUMMARY -->
+    <div class="space-y-4 ml-auto">
+
+      <div class="bg-white rounded-lg shadow p-6 space-y-4">
+
+        <h2 class="font-bold text-lg">Order Summary</h2>
+
+        <div class="space-y-4">
+
+          <div class="flex items-center gap-4">
+            <img src="https://via.placeholder.com/50"
+            class="w-12 h-12 rounded object-cover">
+
+            <div class="flex-1">
+              <p class="font-semibold">Fresh Cassava</p>
+              <p class="text-sm text-gray-500">50kg Bag × 1</p>
+            </div>
+
+            <div class="font-semibold">$45.00</div>
+          </div>
+
+
+          <div class="flex items-center gap-4">
+            <img src="https://via.placeholder.com/50"
+            class="w-12 h-12 rounded object-cover">
+
+            <div class="flex-1">
+              <p class="font-semibold">Habanero Peppers</p>
+              <p class="text-sm text-gray-500">5kg Crate × 2</p>
+            </div>
+
+            <div class="font-semibold">$12.50</div>
+          </div>
+
+        </div>
+
+
+        <div class="border-t pt-4 space-y-2 text-sm">
+
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span>$70.00</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Logistics Fee</span>
+            <span>$8.50</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Taxes (VAT)</span>
+            <span>$2.40</span>
+          </div>
+
+          <div class="flex justify-between font-bold text-green-500">
+            <span>Grand Total</span>
+            <span>$80.90</span>
+          </div>
+
+        </div>
+
+
+        <button class="w-full bg-green-500 text-white font-semibold rounded p-3 hover:bg-green-600 flex items-center justify-center gap-2">
+          Place Order & Pay
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </div>
+
+
+      <div class="bg-green-50 border border-green-100 rounded-lg p-4 flex items-center gap-2 text-green-700 text-sm">
+        <i class="fa-solid fa-shield-halved"></i>
+        Freshness Guaranteed — Produce is harvested 24h before delivery.
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="mt-12 text-center text-gray-400 text-sm mb-6">
+    <i class="fa-solid fa-tractor"></i>
+    AgroBridge Checkout <br>
+    © 2023 AgroBridge Solutions Inc.
+  </footer>
+
+</body>
+</html>
