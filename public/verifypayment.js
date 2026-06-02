@@ -8,7 +8,7 @@ async function verifyPayment() {
   const token = localStorage.getItem("token");
 
   const res = await fetch(
-    `http://localhost:4500/verifypayment/${reference}`,
+    `https://agrobridge-frontend.onrender.com/verifypayment/${reference}`,
     {
       method: "GET",
       headers: {

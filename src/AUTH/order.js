@@ -58,7 +58,7 @@ exports.createOrder = async (req, res) => {
           email: req.user.email,
           amount: totalPrice * 100, // Paystack uses kobo
           reference: order._id.toString(),
-          callback_url: "http://localhost:4500/verifyPayment.html",
+          callback_url: "https://agrobridge-frontend.onrender.com/verifyPayment.html",
           metadata: {
     orderId: order._id
   }

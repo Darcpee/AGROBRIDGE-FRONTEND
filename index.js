@@ -8,6 +8,7 @@ const path = require("path");
 const cors = require("cors");
 dotenv.config();
 const DB = process.env.DB
+const PORT = process.env.PORT || 4500;
 
 
 app.use(cors());
@@ -16,8 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/",router);
 app.use("/webhookrouter",webhookrouter)
 
-app.listen(4500, async()=>{
-    console.log("server is running on http://localhost:4500")
+app.listen(PORT, async()=>{
+    console.log(`server is running on http://localhost:${PORT}`)
     try {
         await mongoose.connect(process.env.DB);
         console.log("connected to DB")

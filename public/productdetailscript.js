@@ -7,7 +7,7 @@ async function loadProduct() {
 
     try {
 
-        const res = await fetch(`http://localhost:4500/getProduct/${productId}`);
+        const res = await fetch(`https://agrobridge-frontend.onrender.com/getProduct/${productId}`);
 
         const data = await res.json();
 

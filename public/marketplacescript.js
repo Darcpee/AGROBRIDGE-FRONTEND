@@ -62,7 +62,7 @@ async function addToCart(productId) {
     try {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://localhost:4500/addToCart", {
+        const res = await fetch("https://agrobridge-frontend.onrender.com/addToCart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -93,7 +93,7 @@ async function loadCartCount() {
     try {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://localhost:4500/getCart", {
+        const res = await fetch("https://agrobridge-frontend.onrender.com/getCart", {
             headers: {
                 "Authorization": `Bearer ${token}`
             }
@@ -197,8 +197,10 @@ function generateStars(rating) {
 // INIT
 // ==========================
 window.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM LOADED");
 
     productGrid = document.getElementById("productGrid");
+    console.log("productGrid:", productGrid);
     searchInput = document.getElementById("searchInput");
     paginationContainer = document.getElementById("pagination");
     suggestBox = document.getElementById("suggestBox");
@@ -294,7 +296,7 @@ async function fetchSuggestions(query) {
     try {
 
         const res = await fetch(
-            `http://localhost:4500/searchSuggestions?q=${query}`,
+            `https://agrobridge-frontend.onrender.com/searchSuggestions?q=${query}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -345,7 +347,7 @@ async function fetchProducts(page = 1) {
     try {
 
         const res = await fetch(
-            `http://localhost:4500/getAllProducts?page=${page}&search=${search}&category=${selectedCategory}`,
+            `https://agrobridge-frontend.onrender.com/getAllProducts?page=${page}&search=${search}&category=${selectedCategory}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -354,11 +356,14 @@ async function fetchProducts(page = 1) {
         );
 
         const data = await res.json();
+        console.log("FULL DATA:", data);
 
         allProducts = data.products || [];
+        console.log("PRODUCTS:", allProducts);
         currentPage = data.currentPage || 1;
         totalPages = data.totalPages || 1;
 
+console.log("COUNT:", allProducts.length);
         displayProducts();
         renderPagination(totalPages);
 
@@ -375,7 +380,7 @@ async function addToCart(productId) {
 
     try {
 
-        const res = await fetch("http://localhost:4500/addToCart", {
+        const res = await fetch("https://agrobridge-frontend.onrender.com/addToCart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -403,11 +408,26 @@ async function addToCart(productId) {
     }
 
 }
+
 function displayProducts() {
-console.log("Displaying products...");
+
+    const productGrid = document.getElementById("productGrid");
+
+
+    if (!productGrid) {
+        console.error("productGrid not found");
+        return;
+    }
+
+
+     console.log("DISPLAY CALLED");
+    console.log("Displaying products...");
+    console.log("productGrid:", productGrid);
+   console.log("allProducts:", allProducts);
+
     productGrid.innerHTML = "";
 
-    if (allProducts.length === 0) {
+    if (!allProducts ||allProducts.length === 0) {
         productGrid.innerHTML = `
             <p class="col-span-full text-center text-gray-500">
                 No products found
@@ -424,16 +444,22 @@ console.log("Displaying products...");
         const card = document.createElement("div");
 
         card.className =
-            "bg-white rounded-2xl shadow-sm hover:shadow-md transition flex flex-col h-full";
+            "bg-white rounded-2xl shadow-sm hover:shadow-md transition flex flex-col h-full overflow-hidden";
 
         card.innerHTML = `
-            <img src="${product.image}" class="h-40 w-full object-cover rounded-t-2xl">
+            <img 
+            src="${product.image}" 
+            alt="${product.name}"
+            class="h-40 w-full object-cover rounded-t-2xl"
+            onerror="this.src='./images/placeholder.jpg'">
 
             <div class="p-2 overflow-hidden flex flex-col flex-grow">
 
-                <div class="flex justify-between font-semibold">
-                    <h3>${product.name}</h3>
-                    <span class="text-green-600">₦${product.price}/kg</span>
+                <div class="flex justify-between items-start gap-2">
+                    <h3 class="font-semibold text-sm md:text-base">
+                    ${product.name}</h3>
+                    <span class="text-green-600 font-semibold whitespace-nowrap">
+                    ₦${product.price}/kg</span>
                 </div>
 
                 <div class="flex justify-between text-sm mt-2 items-center">
@@ -549,129 +575,3 @@ function renderPagination(totalPages) {
 
 
 
-// ==========================
-// Logout functionality
-// ==========================
-// document.addEventListener("DOMContentLoaded", () => {
-
-// const logoutBtn = document.getElementById("logout-btn");
-// const logoutModal = document.getElementById("logout-modal");
-// const confirmLogout = document.getElementById("confirm-logout");
-// const cancelLogout = document.getElementById("cancel-logout");
-
-
-// // OPEN MODAL
-// logoutBtn.addEventListener("click", (e) => {
-// e.preventDefault();
-// logoutModal.classList.remove("hidden");
-// });
-
-
-// // CANCEL LOGOUT
-// cancelLogout.addEventListener("click", () => {
-// logoutModal.classList.add("hidden");
-// });
-
-
-// // CONFIRM LOGOUT
-// confirmLogout.addEventListener("click", async () => {
-
-// try {
-
-// const token = localStorage.getItem("token");
-
-// const res = await fetch("http://localhost:4500/logout", {
-// method: "POST",
-// headers: {
-// Authorization: `Bearer ${token}`
-// }
-// });
-
-// const data = await res.json();
-// console.log(data);
-
-// // remove token
-// localStorage.removeItem("token");
-// localStorage.removeItem("user");
-
-// // close modal
-// logoutModal.classList.add("hidden");
-
-// // redirect
-// window.location.href = "login.html";
-
-// } catch (error) {
-
-// console.error("Logout failed:", error);
-
-// }
-
-// });
-
-// });
-
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-
-//   const logoutBtn = document.getElementById("logout-btn");
-//   const logoutModal = document.getElementById("logout-modal");
-//   const confirmLogout = document.getElementById("confirm-logout");
-//   const cancelLogout = document.getElementById("cancel-logout");
-
-//   // OPEN MODAL
-//   if (logoutBtn && logoutModal) {
-//     logoutBtn.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       logoutModal.classList.remove("hidden");
-//     });
-//   }
-
-//   // CANCEL LOGOUT
-//   if (cancelLogout && logoutModal) {
-//     cancelLogout.addEventListener("click", () => {
-//       logoutModal.classList.add("hidden");
-//     });
-//   }
-
-//   // CONFIRM LOGOUT
-//   if (confirmLogout && logoutModal) {
-//     confirmLogout.addEventListener("click", async () => {
-
-//       try {
-
-//         // 1. GET TOKEN
-//         const token = localStorage.getItem("token");
-
-//         // 2. CALL BACKEND
-//         const res = await fetch("http://localhost:4500/logout", {
-//           method: "POST",
-//           headers: {
-//             Authorization: `Bearer ${token}`
-//           }
-//         });
-
-//         const data = await res.json();
-//         console.log("Logout response:", data);
-
-//         // 3. CLEAR STORAGE
-//         localStorage.removeItem("token");
-//         localStorage.removeItem("user");
-
-//         // 4. CLOSE MODAL
-//         logoutModal.classList.add("hidden");
-
-//         // 5. REDIRECT
-//         window.location.href = "login.html";
-
-//       } catch (error) {
-//         console.error("Logout failed:", error);
-//       }
-
-//     });
-//   }
-
-// });

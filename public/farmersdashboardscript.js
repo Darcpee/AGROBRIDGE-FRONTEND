@@ -38,7 +38,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
 
-    const res = await fetch("http://localhost:4500/uploadProduct", {
+    const res = await fetch("https://agrobridge-frontend.onrender.com/uploadProduct", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`
@@ -69,7 +69,7 @@ async function loadProducts() {
 
   try {
 
-    const res = await fetch("http://localhost:4500/api/products/farmer", {
+    const res = await fetch("https://agrobridge-frontend.onrender.com/products/farmer", {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -85,7 +85,7 @@ async function loadProducts() {
       
       <div class="border rounded-lg p-4">
 
-        <img src="http://localhost:4500/${product.image}" 
+        <img src="https://agrobridge-frontend.onrender.com/${product.image}" 
         class="h-40 w-full object-cover rounded" />
 
         <h3 class="font-semibold mt-2">

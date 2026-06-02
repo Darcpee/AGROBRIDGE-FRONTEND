@@ -5,7 +5,7 @@ try {
 
 const token = localStorage.getItem("token");
 
-await fetch("http://localhost:4500/logout", {
+await fetch("https://agrobridge-frontend.onrender.com/logout", {
 method: "POST",
 headers: {
 "Authorization": `Bearer ${token}`

@@ -14,7 +14,7 @@ async function loadCart(){
 
 const token = localStorage.getItem("token");
 
-const res = await fetch("http://localhost:4500/getCart",{
+const res = await fetch("https://agrobridge-frontend.onrender.com/getCart",{
 headers:{
 Authorization:`Bearer ${token}`
 }
@@ -102,7 +102,7 @@ async function loadCartCount(){
 
 const token = localStorage.getItem("token");
 
-const res = await fetch("http://localhost:4500/getCart",{
+const res = await fetch("https://agrobridge-frontend.onrender.com/getCart",{
 headers:{
 Authorization:`Bearer ${token}`
 }
@@ -129,7 +129,7 @@ updateCartCount(count);
 // delete item from cart
 async function removeItem(productId){
 
-await fetch(`http://localhost:4500/removeItem/${productId}`, {
+await fetch(`https://agrobridge-frontend.onrender.com/removeItem/${productId}`, {
 method: "DELETE",
 headers: {
 Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -153,7 +153,7 @@ loadCartCount();
 // increase quantity
 async function increaseQty(productId){
 
-await fetch(`http://localhost:4500/increaseQty/${productId}`, {
+await fetch(`https://agrobridge-frontend.onrender.com/${productId}`, {
 method: "PUT",
 headers: {
 Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -169,7 +169,7 @@ loadCartCount();
 // decrease quantity
 async function decreaseQty(productId){
 
-await fetch(`http://localhost:4500/decreaseQty/${productId}`, {
+await fetch(`https://agrobridge-frontend.onrender.com/decreaseQty/${productId}`, {
 method: "PUT",
 headers: {
 Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -185,7 +185,7 @@ loadCartCount();
 // update notification count on cart page from backend
 // async function loadNotifications(){
 
-// const res = await fetch("http://localhost:4500/notifications");
+
 // const data = await res.json();
 
 // document.getElementById("update-notification").textContent = data.length;
@@ -217,17 +217,6 @@ badge.textContent = count;
 }
 
 
-// listen for notification updates via websocket
-// const socket = new WebSocket("ws://localhost:4500");
-
-// socket.addEventListener("message", event => {
-
-//   const data = json.parse(event.data);
-
-//   if(data.type === "notiotificationUpdate"){
-//     updateNotificationCount(data.count);
-//   }
-// })
 
 
 
@@ -238,7 +227,7 @@ try{
 
 const token = localStorage.getItem("token")
 
-const res = await fetch("http://localhost:4500/getcart",{
+const res = await fetch("https://agrobridge-frontend.onrender.com/getcart",{
 headers:{
 Authorization:`Bearer ${token}`
 }

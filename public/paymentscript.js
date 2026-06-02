@@ -10,7 +10,7 @@ async function loadCheckoutSummary(){
 
 const token = localStorage.getItem("token")
 
-const res = await fetch("http://localhost:4500/getcart",{
+const res = await fetch("https://agrobridge-frontend.onrender.com/getcart",{
 headers:{
 Authorization:`Bearer ${token}`
 }
@@ -96,7 +96,7 @@ if (!selectedAddress) {
   return;
 }
 
-const res = await fetch("http://localhost:4500/createOrder",{
+const res = await fetch("https://agrobridge-frontend.onrender.com/createOrder",{
 
 method:"POST",
 
