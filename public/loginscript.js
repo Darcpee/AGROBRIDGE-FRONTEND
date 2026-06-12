@@ -51,8 +51,6 @@ if (res.ok && data.token) {
 localStorage.setItem("token", data.token);
 localStorage.setItem("user", JSON.stringify(data.user));
 
-// alert(`Welcome back, ${data.user?.email || "user"}!`);
-
 // SAFE ROLE CHECK
 if (data.user?.role === "farmer") {
 window.location.href = "farmersdashboard.html";
