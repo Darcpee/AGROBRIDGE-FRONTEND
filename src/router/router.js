@@ -16,7 +16,7 @@ router.post("/uploadProduct", upload.single("image"), authenticateToken, require
 router.get("/getAllProducts", getAllProducts);
 router.get("/searchProduct", authenticateToken, require("../AUTH/product"). searchProduct);
 router.get("/searchSuggestions", searchSuggestions);
-router.get("/getProduct/:id", require("../AUTH/product").getProductById);
+router.get("/getProduct/:Id", require("../AUTH/product").getProductById);
 router.post("/addToCart", authenticateToken, require("../AUTH/cart").addToCart);
 router.get("/getCart", authenticateToken, require("../AUTH/cart").getCart);
 router.delete("/removeItem/:productId", authenticateToken, require("../AUTH/cart").removeItem)
