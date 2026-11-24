@@ -35,7 +35,7 @@ const password = document.getElementById("loginpassword").value;
 
 try {
 
-const res = await fetch("https://agrobridge-frontend.onrender.com/login", {
+const res = await fetch("https://agrobridge-frontend.onrender.com", {
 method: "POST",
 headers: {
 "Content-Type": "application/json"
